@@ -74,6 +74,21 @@ class _MyHomePageState extends State<MyHomePage> {
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(5.0))),
     );
 
+    final loginButon = Material(
+      elevation: 5.0,
+      borderRadius: BorderRadius.circular(5.0),
+      color: const Color(0xff01A0C7),
+      child: MaterialButton(
+        minWidth: MediaQuery.of(context).size.width,
+        padding: const EdgeInsets.fromLTRB(15.0, 20.0, 15.0, 20.0),
+        onPressed: () {},
+        child: Text("Sign In",
+            textAlign: TextAlign.center,
+            style: style.copyWith(
+                color: Colors.white, fontWeight: FontWeight.bold)),
+      ),
+    );
+
     return Scaffold(
       body: Container(
         color: Colors.amber[600],
@@ -105,9 +120,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: <Widget>[
                   Container(
                     child: emailField,
-                    margin: const EdgeInsets.fromLTRB(0, 0, 0, 15.0),
+                    margin: const EdgeInsets.fromLTRB(0, 0, 0, 20.0),
                   ),
-                  passwordField
+                  Container(
+                    child: passwordField,
+                    margin: const EdgeInsets.fromLTRB(0, 0, 0, 20.0),
+                  ),
+                  loginButon
                 ],
               ),
             ),
